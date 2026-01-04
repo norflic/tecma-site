@@ -1,169 +1,177 @@
-    /* RESET */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* FOND GLOBAL INDUSTRIEL (IDENTIQUE PARTOUT) */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #222;
+    padding: 0 5%;
+    background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+body:nth-child {
+    max-width: 1200px;
+}
+
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav a {
+    margin-right: 25px;
+    text-decoration: none;
+    color: #1f4fd8;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.logo img {
+    height: 120px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.hero::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 56%;
+    background: url('images/accueil.jpg') center top / 100% auto no-repeat;
+}
+
+.hero-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.hero-text h1 {
+    color: red;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.hero-text h2 {
+    color: #1f4fd8;
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.hero-text p {
+    color: #1f4fd8;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* SECTIONS */
+section {
+    margin: auto;
+    padding: 20px 20px;
+    background: transparent;
+}
+
+.two-cols {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.two-cols .text{
+    flex: 0.4;
+}
+.two-cols .image{
+    flex: 0.5;
+}
+
+/* 40 % TEXTE / 60 % IMAGE */
+.text {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+.image {
+    flex: 0 0 60%;
+}
+
+h3 {
+    color: red;
+    margin-bottom: 12px;
+}
+
+.blue-title {
+    color: #1f4fd8;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.text p,
+.text ul {
+    line-height: 1.6;
+}
+
+.text ul {
+    list-style-type: none;
+}
+
+.image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+
+    /* FOOTER */
+footer {
+    background: transparent;
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid #d0d0d0;
+}
+
+footer h2 {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .two-cols {
+        flex-direction: column;
     }
 
-    /* FOND GLOBAL INDUSTRIEL (IDENTIQUE PARTOUT) */
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: #222;
-      padding: 0 5%;
-      background: linear-gradient(135deg, #f2f2f2 0%, #e6e6e6 100%);
-    }
-
-    /* HEADER */
-    header {
-      background: transparent;
-      border-bottom: 1px solid #d0d0d0;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 0;
-    }
-
-    nav a {
-      margin-right: 25px;
-      text-decoration: none;
-      color: red;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    nav a:last-child {
-      margin-right: 0;
-    }
-
-    .logo img {
-      height: 120px;
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      background: transparent;
-    }
-
-    .hero::before {
-      content: "";
-      display: block;
-      width: 100%;
-      padding-top: 56%;
-      background: url('images/accueil.jpg') center top / 100% auto;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 13%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: 100%;
+    .text,
+    .image {
+        flex: 100%;
     }
 
     .hero-text h1 {
-      color: red;
-      font-size: 70px;
-      font-weight: 700;
-    }
-
-    .hero-text h2 {
-      color: #1f4fd8;
-      font-size: 34px;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    .hero-text p {
-      color: #1f4fd8;
-      font-size: 22px;
-      font-weight: 600;
-      margin-top: 4px;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-      background: transparent;
-    }
-
-    .two-cols {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    /* 40 % TEXTE / 60 % IMAGE */
-    .text {
-      flex: 0 0 40%;
-    }
-
-    .image {
-      flex: 0 0 60%;
-    }
-
-    h3 {
-      color: red;
-      margin-bottom: 12px;
-    }
-
-    .blue-title {
-      color: #1f4fd8;
-      font-weight: 700;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .text p,
-    .text ul {
-      line-height: 1.6;
-    }
-
-    .text ul {
-      padding-left: 20px;
-      list-style: disc;
-    }
-
-    .image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* FOOTER */
-    footer {
-      background: transparent;
-      text-align: center;
-      padding: 60px 20px;
-      border-top: 1px solid #d0d0d0;
-    }
-
-    footer h2 {
-      color: red;
-      margin-bottom: 15px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .two-cols {
-        flex-direction: column;
-      }
-
-      .text,
-      .image {
-        flex: 100%;
-      }
-
-      .hero-text h1 {
         font-size: 48px;
-      }
     }
+}
+
+a:first-child {
+    color: red;
+}
