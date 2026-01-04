@@ -87,7 +87,7 @@ nav a {
 
 /* SECTIONS */
 section {
-    margin: auto;
+    margin: 0;
     padding: 20px 20px;
     background: transparent;
 }
@@ -102,16 +102,15 @@ section {
 }
 .two-cols .image{
     flex: 0.5;
+    
 }
 
 /* 40 % TEXTE / 60 % IMAGE */
 .text {
     flex: 0 0 40%;
     text-align: center;
-}
-
-.image {
-    flex: 0 0 60%;
+    width: 100%;
+    margin: auto;
 }
 
 h3 {
